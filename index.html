@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Toll Calculator</title>
+</head>
+<body>
+    <div class="container">
+        <h1>Toll Calculator</h1>
+        
+        <label for="start">Starting Point:</label>
+        <input type="text" id="start" placeholder="Enter starting point">
+
+        <label for="end">Destination:</label>
+        <input type="text" id="end" placeholder="Enter destination">
+
+        <label for="vehicle">Vehicle Type:</label>
+        <select id="vehicle">
+            <option value="car">Car</option>
+            <option value="truck">Truck</option>
+            <option value="motorcycle">Motorcycle</option>
+        </select>
+
+        <button onclick="calculateToll()">Calculate Toll</button>
+
+        <div id="map"></div>
+
+        <h2>Toll Result:</h2>
+        <p id="result"></p>
+    </div>
+
+    <script src="@googlemaps/polyline-codec." async defer></script>
+    <script src="https://maps.googleapis.com/maps/api/js?libraries=geometry"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@googlemaps/polyline-codec@1.1.2"></script>
+    <script src="app.js"></script>
+</body>
+</html>
